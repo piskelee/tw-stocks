@@ -1,0 +1,147 @@
+<!DOCTYPE html>
+<html lang="zh-TW">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>廟宇捐錢記錄App 原型圖</title>
+    <style>
+        body {
+            font-family: 'Noto Serif TC', serif;
+            background-color: #f5e9d8;
+            margin: 0;
+            padding: 20px;
+        }
+        .container {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 20px;
+            justify-content: center;
+        }
+        .screen {
+            width: 360px;
+            height: 640px;
+            background-color: #fff;
+            border-radius: 20px;
+            box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+            overflow: hidden;
+            position: relative;
+            padding: 20px;
+            box-sizing: border-box;
+        }
+        .title {
+            font-size: 24px;
+            color: #8b4513;
+            text-align: center;
+            margin-bottom: 20px;
+            border-bottom: 2px solid #daa520;
+            padding-bottom: 10px;
+        }
+        .btn {
+            background-color: #daa520;
+            color: white;
+            padding: 10px;
+            text-align: center;
+            border-radius: 8px;
+            margin: 10px 0;
+            cursor: pointer;
+        }
+        .input {
+            width: 100%;
+            padding: 10px;
+            margin: 10px 0;
+            border: 1px solid #ccc;
+            border-radius: 5px;
+            box-sizing: border-box;
+        }
+        .card {
+            background-color: #fdf5e6;
+            padding: 15px;
+            border-radius: 10px;
+            margin: 10px 0;
+        }
+        .chart {
+            width: 100%;
+            height: 200px;
+            background-color: #eee;
+            border-radius: 10px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: #666;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <!-- 登錄頁面 -->
+        <div class="screen">
+            <div class="title">登錄</div>
+            <input type="text" class="input" placeholder="用戶名">
+            <input type="password" class="input" placeholder="密碼">
+            <div class="btn">登錄</div>
+        </div>
+
+        <!-- 主頁面 -->
+        <div class="screen">
+            <div class="title">廟宇捐款</div>
+            <div class="card">
+                <p>總捐款金額</p>
+                <h2>NT$ 123,456</h2>
+            </div>
+            <div class="btn">新增捐款</div>
+            <div class="btn">查詢記錄</div>
+            <div class="btn">統計報表</div>
+            <div class="btn">設置</div>
+        </div>
+
+        <!-- 新增捐款頁面 -->
+        <div class="screen">
+            <div class="title">新增捐款</div>
+            <input type="text" class="input" placeholder="捐款者姓名">
+            <input type="number" class="input" placeholder="金額 (NT$)">
+            <input type="date" class="input">
+            <input type="text" class="input" placeholder="捐款用途">
+            <div class="btn">保存</div>
+        </div>
+
+        <!-- 捐款查詢頁面 -->
+        <div class="screen">
+            <div class="title">捐款查詢</div>
+            <input type="text" class="input" placeholder="輸入姓名或用途">
+            <div class="card">
+                <p>張三 - NT$ 500</p>
+                <p>2025-03-15 - 香油錢</p>
+            </div>
+            <div class="card">
+                <p>李四 - NT$ 1,000</p>
+                <p>2025-03-18 - 修繕費</p>
+            </div>
+        </div>
+
+        <!-- 統計頁面 -->
+        <div class="screen">
+            <div class="title">統計報表</div>
+            <div class="chart">模擬圖表：捐款趨勢</div>
+            <div class="card">
+                <p>本月總額: NT$ 50,000</p>
+                <p>香油錢: NT$ 30,000</p>
+                <p>修繕費: NT$ 20,000</p>
+            </div>
+        </div>
+
+        <!-- 設置頁面 -->
+        <div class="screen">
+            <div class="title">設置</div>
+            <div class="card">
+                <p>語言</p>
+                <select class="input">
+                    <option>中文</option>
+                    <option>English</option>
+                </select>
+            </div>
+            <div class="btn">備份數據</div>
+            <div class="btn">登出</div>
+        </div>
+    </div>
+</body>
+</html>
